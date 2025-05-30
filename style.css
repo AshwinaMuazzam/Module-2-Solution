@@ -1,0 +1,79 @@
+/* General Reset and Styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Menu Item Styling */
+.menu-item {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 15px;
+  background-color: #eee;
+  position: relative;
+}
+
+/* Section Titles */
+.menu-item h2 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  margin: 0;
+  padding: 5px 10px;
+  color: white;
+  font-size: 16px;
+}
+
+/* Individual Colors */
+.chicken h2 {
+  background-color: #d9534f; /* red-pink */
+}
+
+.beef h2 {
+  background-color: #c9302c; /* deeper red */
+}
+
+.sushi h2 {
+  background-color: #f0ad4e; /* yellow-orange */
+  color: black;
+}
+
+/* Layouts */
+@media (min-width: 992px) {
+  /* Desktop: 3 sections side by side */
+  .menu-item {
+    float: left;
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet: 2 side by side, last one full width */
+  .menu-item {
+    float: left;
+    width: 45%;
+  }
+
+  .menu-item:nth-child(3) {
+    width: 95%;
+    clear: both;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile: full width for each */
+  .menu-item {
+    width: 100%;
+    float: none;
+  }
+}
